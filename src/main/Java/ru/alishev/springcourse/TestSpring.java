@@ -1,15 +1,21 @@
 package ru.alishev.springcourse;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ArrayList;
 
 public class TestSpring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(
+                SpringConfig.class
         );
+
+//        ClassPathXmlApplicationContext context =
+//                new ClassPathXmlApplicationContext(
+//                "applicationContext.xml"
+//        );
 
 
 //        Music music = context.getBean("rockMusic",
